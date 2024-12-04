@@ -1,0 +1,487 @@
+*{
+    color: #FFF;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(40deg, rgba(2,0,36,1), rgba(121,9,118,1), rgba(89,0,255,1));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.navbar{
+    width: 100%;
+    height: 6vh;
+    margin-bottom: 1em;
+    padding: 2em 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.nav-list{
+    width: 30%;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link{
+    font-size: 1.3em;
+    text-decoration: none;
+}
+
+.nav-item{
+    display: flex;
+    align-items: center;
+    padding: .5em;
+    border-radius: 10px;
+    transition: all .2s;
+    &:hover{
+        background: black;
+    }
+}
+
+.nav-item:nth-child(5){
+    &:hover{
+        background: none;
+    }
+}
+
+#navLogo{
+    color: #FFF;
+    text-decoration: none;
+    margin-left: 2em;
+    position: absolute;
+    left: 0;
+    top: .4em;
+    
+    #logo{
+        width: 10em;
+    }
+}
+
+#btnUsuario{
+    background-color: white;
+    color: black;
+    padding: .6em;
+    border-radius: 10px;
+    right: 0;
+
+    height: 40px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i{
+        color: black;
+    }
+
+    &:hover{
+        background: black;
+        color: white;
+        box-shadow: 0 0  10px 4px #FFF;
+        i{
+            color: white;
+        }
+    }
+
+    transition: all .3s;
+}
+
+.contenedorMain{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 4em;
+}
+
+.infoContainer{
+    padding: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 3em;
+
+    #fotoPerfil{
+        width: 22%;
+        margin: 1em;
+        padding: 1.5em;
+        border-radius: 50%;
+        object-fit: cover;
+        background-color: black;
+
+
+        &:hover{
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, .1);
+        }
+    }
+
+
+    .datosUser{
+        display: flex;
+        width: 60%;
+        flex-direction: column;
+        background: rgba(0, 0, 0, .6);
+        justify-content: space-around;
+        padding: 2.5em;
+        border-radius: 20px;
+
+        span{
+            font-size: 1.3em;
+            color: white;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+    
+        p{
+            border-radius: 10px;
+            width: 40%;
+            background: rgba(0, 0,0, .4);
+            padding: 10px;
+            margin: 1em 0;
+            font-size: 1.3em;
+        }
+        button{
+            font-size: 1.4em;
+            width: fit-content;
+            padding: .4em;
+            border: none;
+            border-radius: 10px;
+            background: rgba(220, 80, 140, .2); 
+            color: white;
+            cursor: pointer;
+            transition: all .2s;
+
+            &:hover{
+                background: rgba(220, 80, 140, .5);
+            }
+        }
+    }
+}
+
+.carrito{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+    border-radius: 20px;
+    gap: 2em;
+
+    h2{
+        font-size: 2em;
+        padding: 1em;
+        width: 90%;
+        text-align: center;
+        border-bottom: 2px solid white;
+        border-top: 2px solid white;
+    }
+
+    .carritoItems{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1em;
+
+
+        .producto {
+            gap: 1em;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            width: 20em;
+            padding: 1em;
+            max-width: 30em;
+            &:hover {
+                transform: translateY(-10px);
+                box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+            }
+    
+            img {
+                width: 40%;
+                height: 7.3em;
+                border-radius: 5px;
+                margin: 2em 0 1em 0;
+            }
+    
+            h3 {
+                font-size: 1.1em;
+                color: white;
+            }
+    
+            p {
+                font-size: 1.1em;
+                margin: 5px 0;
+                color: white;
+    
+                strong {
+                    color: aquamarine;
+                }
+            }
+        }
+    }
+}
+
+
+#btnCarrito{
+    margin: auto;
+    width: fit-content;
+    padding: 1em;
+    border: none;
+    font-size: 1em;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    cursor: pointer;
+    transition: all .2s;
+
+    &:hover{
+        background-color: rgba(82, 21, 130, .5);
+    }
+}
+
+footer{
+    background: #000;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    ul{
+        width: 110%;
+        display: flex;
+        justify-content: space-evenly;
+        list-style: none;
+        color: #FFF;
+        
+        li{
+            a{
+                padding: 1em;
+                border-radius: 10px;
+                text-decoration: none;
+                transition: all .2s;
+                &:hover{
+                    color: black;
+                    background: white;
+                }
+            }
+        }
+
+        #redes{
+            text-decoration: none;
+            transition: all.2s;
+            cursor: pointer;
+
+            span{
+                padding: 1em;
+                border-radius: 10px;
+                transition: all .2s;
+
+                &:hover{
+                color: black;
+                background: white;
+                }
+            }
+
+            #redesActive{
+                display: none;
+                background: white;
+                width: 12em;
+                border-radius: 10px;
+                justify-content: space-evenly;
+                align-items: center;
+                position: absolute;
+                transform: translate(-1.4em, -5.8em);
+                animation: popup .4s cubic-bezier(.41,.95,.81,1.31);
+                a{
+                    padding: 10px;
+                    height: 70%;
+                    img{
+                        width: 2em;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes popup{
+    0%{
+        opacity: 0;
+        transform: translate(-1.4em, 0);
+    }
+    100%{
+        opacity: 1;
+        transform: translate(-1.4em, -5.8em);
+    }
+    
+}
+
+
+.menu{
+    display: none;
+    background-color: rgba(0,0,0,.9);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70vh;
+    width: 60%;
+    z-index: 1;
+    transition: all .2s;
+
+    a{
+        position: relative;
+        width: 50%;
+        background-color: rgba(121,9,118,.5);
+        padding: .3em;
+        border-radius: 10px;
+    }
+}
+
+#menuBtnContenedor{
+    display: none;
+}
+
+@media screen and (max-width: 720px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        display: none !important;
+    }
+
+    #menuBtnContenedor{
+        display: block;
+        background: white;
+        top : 0;
+        position: fixed;
+        margin: 1em;
+        padding: 1em;
+        cursor: pointer;
+        border: none !important;
+        border-radius: 10px;
+        i{
+            color: black;
+            padding: .4em 0;
+        }
+    }
+
+    .infoContainer{
+        margin: 1em 0 0 0;
+        gap: 1em;
+        flex-direction: column;
+
+        #fotoPerfil{
+            width: 50%;
+            object-fit: cover;
+        }
+
+        .datosUser{
+            width: 90%;
+            padding: 1em;
+            border-radius: 20px;
+            justify-content: flex-end;
+        
+            span{
+                margin: 0;
+                font-size: .8em;
+                letter-spacing: 5px;
+            }
+
+            p{
+                padding: .3em;
+                width: 85%;
+                background: rgba(0, 0,0, .7);
+                padding: 10px;
+                font-size: 1em;
+            }
+            button{
+                margin: 0;
+                font-size: 1em;
+            }
+        }
+    }
+
+    .carrito{
+        h2{
+            font-size: 1em;
+        }
+    }
+}
+
+
+@media screen and (max-width: 1410px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        width: 95%;
+    }
+
+    footer ul{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1050px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    .navbar{
+        width: 86%;
+    }
+
+    .infoContainer{
+        align-items: center;
+    }
+
+    
+    footer{
+        padding: 1em 0 0 0;
+        position: relative;
+        ul{
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.5em;
+            li{
+                a{
+                    padding: .5em;
+                    transition: all .2s;
+                    &:hover{
+                        color: black;
+                        background: white;
+                    }
+                }
+            }
+
+            #redes{
+                span{
+                    padding: .5em;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,149 @@
+*{
+    color: #FFF;
+    font-family: monospace;
+
+    &::selection{
+        background: lightseagreen;
+    }
+}
+
+body{
+    background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,1)),url(https://bimq0.github.io/Mi-mejor-pc/imagenes/indexBG.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo{
+    width: 50em;
+    margin: 1em 0 1em 0;
+    animation: logoAnim 4s infinite cubic-bezier(.1,2,.3,.1);
+    padding-inline: 3em;
+    border-radius: 30%;
+}
+
+@keyframes logoAnim {
+    0%{
+        box-shadow: 20px 20px 30px rgb(129, 3, 146);
+    }
+    33%{
+        box-shadow: 20px -20px 30px rgb(3, 61, 95);
+    }
+    66%{
+        box-shadow: -20px -20px 30px rgb(5, 112, 145);
+    }
+    100%{
+        box-shadow: -20px 20px 30px rgb(82, 3, 146);
+    }    
+}
+
+p{
+    font-size: 2em;
+    padding: 1em;
+    background: rgba(0,0,0,.8);
+    box-shadow: 0 0 20px purple;
+    border-radius: 10px;
+    margin: 1em;
+
+    text-align: center;
+
+    span{
+        font-weight: bold;
+        color: lightseagreen;
+    }
+}
+
+.link_container{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 1em;
+
+    a{
+        font-size: 2em;
+        padding: .7em;
+        border: 2px solid white;
+        border-radius: 10px;
+        margin: 1em;
+        text-decoration: none;
+
+        &:hover{
+            background: black;
+            border: 2px solid white;
+            margin-top: 0;
+            box-shadow: 0 0  20px #FFF;
+        }
+
+        &:active{
+            background: white;
+            color: black;
+        }
+
+        transition: .2s;
+    }
+}
+#btnLogin{
+    display: none;
+}
+
+#btnUsuario{
+    position: absolute;
+    background-color: white;
+    color: black;
+    padding: 1em;
+    border-radius: 10px;
+    margin: 1em;
+    right: 0;
+
+    height: 40px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i{
+        color: black;
+    }
+
+    &:hover{
+        background: black;
+        color: white;
+        box-shadow: 0 0  10px 4px #FFF;
+        i{
+            color: white;
+        }
+    }
+
+    transition: all .3s;
+}
+
+@media screen and (max-width: 640px){
+    #titulo{
+        width: 100%;
+        margin: 10em 0 0 0;
+        animation: none;
+        padding: 0;
+    }
+
+    p{
+        font-size: 1.5em;
+        margin: 10% 0 0 0;
+    }
+
+    .link{
+        display: none;
+    }
+    #btnLogin{
+        display: block !important;
+    }
+
+    #btnUsuario{
+        display: none;
+    }
+}
