@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Mejor PC</title>
+    <link rel="stylesheet" href="css/productos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/0c1da759b5.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" id="navLogo"><img id="logo" src="imagenes/logo.png" alt="Mi Mejor PC"></a>
+    <ul class="nav-list">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Inicio</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="productos.html">Productos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="contactos.html">Contacto</a>
+      </li>
+      <li class="nav-item">
+        <a href="user.html" id="btnUsuario"><i class="fa-solid fa-user fa-xl"></i></a>
+      </li>
+    </ul>
+  </nav>
+
+  <button id="menuBtnContenedor" >
+    <i class="fa-solid fa-bars fa-xl" id="menuBtn"></i>
+  </button>
+
+  <button id="menuFiltros" >
+    <span>Filtros</span>
+  </button>
+
+  <div class="menu">
+    <a class="nav-link" href="user.html">Mi Perfil</a>
+    <a class="nav-link" href="index.html">Inicio</a>
+    <a class="nav-link" href="productos.html">Productos</a>
+    <a class="nav-link" href="contactos.html">Contacto</a>
+  </div>
+
+  <main>
+
+    <aside>
+        <h3>Filtros</h3>
+        <section id="filtrosContainer">
+            <div id="filtroSeleccionTipo">
+                <h4>Tipo</h4>
+                <div>
+                    <label for="filtroSeleccion">Procesadores</label>
+                    <input type="radio" class="filtroRadio" name="Tipo"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">Tarjetas Gráficas</label>
+                    <input type="radio" class="filtroRadio" name="Tipo"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">Almacenamiento</label>
+                    <input type="radio" class="filtroRadio" name="Tipo"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">Laptops</label>
+                    <input type="radio" class="filtroRadio" name="Tipo"></input>
+                </div>
+            </div>
+            <div id="filtroSeleccionMarca">
+                <h4>Marca</h4>
+                <div>
+                    <label for="filtroSeleccion">Asus</label>
+                    <input type="radio"  class="filtroRadio" name="Marca"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">MSI</label>
+                    <input type="radio" class="filtroRadio" name="Marca"></input>
+                </div>
+                <div> 
+                    <label for="filtroSeleccion">Corsair</label>
+                    <input type="radio" class="filtroRadio" name="Marca"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">NVIDIA</label>
+                    <input type="radio" class="filtroRadio" name="Marca"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">AMD</label>
+                    <input type="radio" class="filtroRadio" name="Marca"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">Intel</label>
+                    <input type="radio" class="filtroRadio" name="Marca"></input>
+                </div>
+            </div>
+            <div id="filtroSeleccionPrecio">
+                <h4>Precio</h4>
+                <div>
+                    <label for="filtroSeleccion">Precio Min</label>
+                    <input type="number" class="filtroNumero" id="minPrecio"></input>
+                </div>
+                <div>
+                    <label for="filtroSeleccion">Precio Max</label>
+                    <input type="number" class="filtroNumero" id="maxPrecio"></input>
+                </div>
+            </div>
+        </section>
+      </aside>
+    
+        <section id="mainSection">
+            <h1 id="tituloBueno">Catalogo de productos</h1>
+            <!--Laptops -->
+            <section id="laptops">
+                <h2>Laptops</h2>
+                <div class="productos">
+                    <div class="producto productoLaptop" id="l1">
+                        <img src="https://m.media-amazon.com/images/I/71IsafDXnKL.jpg" alt="Laptop Gaming">
+                        <h3>Laptop Gaming</h3>
+                        <p>Precio: <strong>Bs. 999</strong></p>
+                        <p>Stock: <span id="l1Stock"></span></p>
+                        <button id="añadirl1">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoLaptop" id="l2">
+                        <img src="https://s.libertaddigital.com/2023/10/07/portatil-ultrabook-asus-zenbook-pro-duo-14-2.jpg" alt="Laptop Ultrabook">
+                        <h3>Laptop Ultrabook</h3>
+                        <p>Precio: <strong>Bs. 799</strong></p>
+                        <p>Stock: <span id="l2Stock"></span></p>
+                        <button id="añadirl2">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoLaptop" id="l3">
+                        <img src="https://www.hp.com/content/dam/sites/worldwide/personal-computers/consumer/laptops/2-in-1s/pavilion/pavilion-plus-14-convertible-laptop/HP%20Envy%20x360%2013.3_SpaceBlue@2x.png" alt="Laptop 2 en 1">
+                        <h3>Laptop 2 en 1</h3>
+                        <p>Precio: <strong>Bs. 650</strong></p>
+                        <p>Stock: <span id="l3Stock"></span></p>
+                        <button id="añadirl3">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Memorias -->
+            <section id="memorias">
+                <h2>Almacenamiento</h2>
+                <div class="productos">
+                    <div class="producto productoMemoria" id="m1">
+                        <img src="https://http2.mlstatic.com/D_NQ_NP_965199-MLC50775285889_072022-O.webp" alt="Memoria USB 64GB">
+                        <h3>Memoria USB 64GB</h3>
+                        <p>Precio: <strong>Bs. 25</strong></p>
+                        <p>Stock: <span id="m1Stock"></span></p>
+                        <button id="añadirm1">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoMemoria" id="m2">
+                        <img src="https://www.kingstonstore.com.br/cdn/shop/products/DTMAX1T4_1024x.jpg?v=1630528287" alt="Memoria USB 128GB">
+                        <h3>Memoria USB 128GB</h3>
+                        <p>Precio: <strong>Bs. 35</strong></p>
+                        <p>Stock: <span id="m2Stock"></span></p>
+                        <button id="añadirm2">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoMemoria" id="m3">
+                        <img src="https://m.media-amazon.com/images/I/71QygIvKzfL.jpg" alt="SSD 1TB">
+                        <h3>SSD 1TB</h3>
+                        <p>Precio: <strong>Bs. 120</strong></p>
+                        <p>Stock: <span id="m3Stock"></span></p>
+                        <button id="añadirm3">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </section>
+    
+            <!--RAM -->
+            <section id="ram">
+                <h2>Memorias RAM</h2>
+                <div class="productos">
+                    <div class="producto productoRam" id="r1">
+                        <img src="https://elgeniox.com/cdn/shop/files/memoria-ram-corsair-vengeance-lpx-8gb-3200-mhz20240729T153616474.jpg?v=1722267382&width=750" alt="RAM 8GB DDR4">
+                        <h3>RAM 8GB DDR4</h3>
+                        <p>Precio: <strong>Bs. 45</strong></p>
+                        <p>Stock: <span id="r1Stock"></span></p>
+                        <button id="añadirr1">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoRam" id="r2">
+                        <img src="https://assets.corsair.com/image/upload/akamai/pdp/vengeance-rgb-pro/Content/Vengeance_RGB_Pro_PDP_Black_04.png" alt="RAM 16GB DDR4">
+                        <h3>RAM 16GB DDR4</h3>
+                        <p>Precio: <strong>Bs. 85</strong></p>
+                        <p>Stock: <span id="r2Stock"></span></p>
+                        <button id="añadirr2">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoRam" id="r3">
+                        <img src="https://i.blogs.es/fa82ae/corsair-vengeance/450_1000.jpg" alt="RAM 32GB DDR4">
+                        <h3>RAM 32GB DDR4</h3>
+                        <p>Precio: <strong>Bs. 150</strong></p>
+                        <p>Stock: <span id="r3Stock"></span></p>
+                        <button id="añadirr3">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </section>
+    
+            <!--Tarjetas Gráficas -->
+            <section id="tarjetas-graficas">
+                <h2>Tarjetas Gráficas</h2>
+                <div class="productos">
+                    <div class="producto productoTarjeta" id="g1">
+                        <img src="https://asset.msi.com/resize/image/global/product/product_8_20190314112204_5c89c8dc6db62.png62405b38c58fe0f07fcef2367d8a9ba1/1024.png" alt="NVIDIA GTX 1660">
+                        <h3>NVIDIA GTX 1660</h3>
+                        <p>Precio: <strong>Bs. 350</strong></p>
+                        <p>Stock: <span id="g1Stock"></span></p>
+                        <button id="añadirg1">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoTarjeta" id="g2">
+                        <img src="https://matecsbol.com/cdn/shop/files/81DZAnm7akL._AC_SL1500_1200x.jpg?v=1718296601" alt="NVIDIA RTX 3060">
+                        <h3>NVIDIA RTX 3060</h3>
+                        <p>Precio: <strong>Bs. 600</strong></p>
+                        <p>Stock: <span id="g2Stock"></span></p>
+                        <button id="añadirg2">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoTarjeta" id="g3">
+                        <img src="https://www.asus.com/media/global/products/utcn39mqdlxmh2r1/P_setting_xxx_0_90_end_500.png" alt="AMD Radeon RX 5700">
+                        <h3>AMD Radeon RX 5700</h3>
+                        <p>Precio: <strong>Bs. 500</strong></p>
+                        <p>Stock: <span id="g3Stock"></span></p>
+                        <button id="añadirg3">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </section>
+    
+            <!--Procesadores -->
+            <section id="procesadores">
+                <h2>Procesadores</h2>
+                <div class="productos">
+                    <div class="producto productoProcesador" id="p1">
+                        <img src="https://m.media-amazon.com/images/I/71HaUo5Gw-L._AC_UF350,350_QL80_.jpg" alt="Intel Core i5 11600K">
+                        <h3>Intel Core i5 11600K</h3>
+                        <p>Precio: <strong>Bs. 250</strong></p>
+                        <p>Stock: <span id="p1Stock"></span></p>
+                        <button id="añadirp1">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoProcesador" id="p2">
+                        <img src="https://bgamer.pro/wp-content/uploads/2021/01/1111.jpg" alt="AMD Ryzen 5 5600X">
+                        <h3>AMD Ryzen 5 5600X</h3>
+                        <p>Precio: <strong>Bs. 270</strong></p>
+                        <p>Stock: <span id="p2Stock"></span></p>
+                        <button id="añadirp2">Añadir al Carrito</button>
+                    </div>
+                    <div class="producto productoProcesador" id="p3">
+                        <img src="https://m.media-amazon.com/images/I/71diouNMRHL._AC_SL1500_.jpg" alt="Intel Core i9 11900K">
+                        <h3>Intel Core i9 11900K</h3>
+                        <p>Precio: <strong>Bs. 500</strong></p>
+                        <p>Stock: <span id="p3Stock"></span></p>
+                        <button id="añadirp3">Añadir al Carrito</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+  </main>
+    <footer>
+        <ul>
+          <li><a href="contactos.html" class="linksFooter">Contacto</a></li>
+          <li id="redes"><span id="redesSpan">Redes Sociales</span> 
+            <div id="redesActive">
+                <a href=""><img src="https://toppng.com/uploads/preview/whatsapp-vs-slack-wsp-slack-svg-whatsapp-icon-vector-11562891097ze2ncrz0fn.png" alt=""></a>
+                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/220px-2021_Facebook_icon.svg.png" alt=""></a>
+                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt=""></a>
+            </div>
+        </li>
+          <li><a href="sobre_nosotros.html" class="linksFooter">Sobre Nosotros</a></li>
+          <li><a href="PoliticadePrivacidad.html" class="linksFooter">Politica de Privacidad</a></li>
+          <li><a href="terminos.html" class="linksFooter">Terminos y condiciones</li>
+        </ul>
+    </footer>
+    <script src="js/productos.js" type="module"></script>
+</body>
+</html>

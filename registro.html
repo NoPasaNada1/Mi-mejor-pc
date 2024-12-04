@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mi Mejor PC</title>
+        <meta name="description" content="Estas son los 5 mejores ensambles para pc en 2024 ordenados por precio, desde computadoras de entrada hasta las mas potentes del mercado">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/registro.css">
+        <script src="https://kit.fontawesome.com/0c1da759b5.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" href="imagenes/logo.png">
+    </head>
+    <body>
+        <section>
+            <h1><span style="color: rgb(60,210,170);">Regístrate</span></h1>
+            <form>
+                <label for="usuario">Usuario: </label>
+                <input type="text" placeholder="Introduzca su usuario" id="usuarioRegistro" required>
+                <label for="correo">Correo: </label>
+                <input type="email" placeholder="Introduzca su correo" id="correoRegistro" required>
+                <label for="contraseña">Contraseña: </label>
+                <input type="password" placeholder="Introduzca su contraseña" id="contraseñaRegistro" required>
+                <label for="telefono">Telefono: </label>
+                <input type="number" placeholder="Introduzca su telefono" id="telefonoRegistro" required>
+
+                <label for="terminosCheck"> <input type="checkbox" id="terminosCheck" required> Acepto los <a href="terminos.html">Terminos y Condiciones </a></label> 
+                <label for="privacidadCheck"> <input type="checkbox" id="privacidadCheck" required> Acepto la <a href="politicadePrivacidad.html">Política de Privacidad</a></label>
+
+                <button type="button" id="btnRegistrar">Registrarse</button>
+            </form>
+        </section>
+        <script src="js/registro.js"></script>
+    </body>
+</html> 

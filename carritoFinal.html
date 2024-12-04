@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mi Mejor PC</title>
+        <meta name="description" content="Estas son los 5 mejores ensambles para pc en 2024 ordenados por precio, desde computadoras de entrada hasta las mas potentes del mercado">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/carrito.css">
+        <script src="https://kit.fontawesome.com/0c1da759b5.js" crossorigin="anonymous"></script>
+        <link rel="icon" type="image/png" href="imagenes/logo.png">
+    </head>
+    <body>
+      <nav class="navbar">
+        <a href="index.html" id="navLogo"><img id="logo" src="imagenes/logo.png" alt="Mi Mejor PC"></a>
+        <ul class="nav-list">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="productos.html">Productos</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contactos.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a href="user.html" id="btnUsuario"><i class="fa-solid fa-user fa-xl"></i></a>
+          </li>
+        </ul>
+      </nav>
+
+      <button id="menuBtnContenedor" >
+        <i class="fa-solid fa-bars fa-2xl" id="menuBtn"></i>
+      </button>
+    
+      <div class="menu">
+        <a class="nav-link" href="user.html">Mi Perfil</a>
+        <a class="nav-link" href="index.html">Inicio</a>
+        <a class="nav-link" href="productos.html">Productos</a>
+        <a class="nav-link" href="contactos.html">Contacto</a>
+      </div>
+      
+
+    <section class="contenedorMain">
+      <section class="carrito">
+        <h2>Tu carrito (<span id="carritoTotal">0</span> articulos)</h2>
+        <div class="carritoItems">
+        </div>
+      </section>
+      <aside>
+        <h2>Confirmacion de compra</h2>
+        <div id="datosCompra">
+            <p>Nombre: <span id="nombreCompra"></span></p>
+            <p>Email: <span id="emailCompra"></span></p>
+            <p>Subtotal: <span id="subtotal"></span></p>
+            <div id="preciosProductos"></div>
+            <h3>Datos de pago</h3>
+            <label for="tarjeta">Tarjeta de Credito:</label>
+            <input type="number" id="tarjeta" name="tarjeta" placeholder="Tarjeta de Credito" required>
+            <label for="Codigo">Codigo de Seguridad:</label>
+            <input type="number" id="Codigo" name="Codigo" placeholder="Codigo de Seguridad" required>
+        </div>
+        <button id="btnCarrito">FInalizar Compra</button>
+    </aside>
+    </section>
+
+      <footer>
+        <ul>
+          <li><a href="contactos.html" class="linksFooter">Contacto</a></li>
+          <li id="redes"><span id="redesSpan">Redes Sociales</span>
+            <div id="redesActive">
+                <a href=""><img src="https://toppng.com/uploads/preview/whatsapp-vs-slack-wsp-slack-svg-whatsapp-icon-vector-11562891097ze2ncrz0fn.png" alt=""></a>
+                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/220px-2021_Facebook_icon.svg.png" alt=""></a>
+                <a href=""><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1200px-Instagram_logo_2022.svg.png" alt=""></a>
+            </div>
+        </li>
+          <li><a href="sobre_nosotros.html" class="linksFooter">Sobre Nosotros</a></li>
+          <li><a href="PoliticadePrivacidad.html" class="linksFooter">Politica de Privacidad</a></li>
+          <li><a href="terminos.html" class="linksFooter">Terminos y condiciones</li>
+        </ul>
+    </footer>
+    <script src="js/carrito.js" type="module"></script>
+  </body>
+</html>
